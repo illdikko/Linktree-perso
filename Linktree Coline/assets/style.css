@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+#profpic {
+    margin-bottom: 20px;
+}
+
+.profilepicture {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+#title-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#undertitle-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 24px;
+    opacity: 0.8;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    max-width: 680px;
+    margin: 12px 0;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.btn-text {
+    font-size: 14px;
+}
