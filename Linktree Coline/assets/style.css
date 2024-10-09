@@ -38,20 +38,29 @@ body {
 
 .button {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content: flex;
     width: 50vw;
     max-width: 680px;
-    margin: 12px 0;
+    margin: 2px 0;
     padding: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: hwb(253 7% 11% / 0.452);
+    opacity:1;
     border-radius: 50px;
     text-decoration: none;
-    color: #fff;
     font-weight: 600;
 }
 
+.btn-link{
+    display: flex;
+}
+
+.btn-img{
+    align-self: flex-start;
+}
+
 .logo {
+    
     width: 20px;
     height: 20px;
     margin-right: 8px;
@@ -59,4 +68,5 @@ body {
 
 .btn-text {
     font-size: 14px;
+    color: hwb(348 62% 5%);
 }
