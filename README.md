@@ -15,8 +15,8 @@ HTML (15pts)
 -Image : alt text /!\
 -Titre
 -Sous-titre
--Boutons
--Logos
+-Boutons x3
+-Logos x3
 -Footer
 
 
@@ -31,4 +31,8 @@ CSS (30 pts)
 -Design choisi: Glassmorphism.
 -Utiliser media queries
 
-clyiueMOJMLKF
+Add a vivid background to the root element.
+Apply an opacity to the object in focus.
+Add a background blur using the backdrop-filter property.
+Add a light border and border radius.
+Apply shadow using the CSS Box Shadow property.

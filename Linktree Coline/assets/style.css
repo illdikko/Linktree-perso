@@ -1,3 +1,12 @@
+/* Glassmorphism css to apply to the relevant elements:
+
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10.5px );
+-webkit-backdrop-filter: blur( 10.5px );
+border-radius: 10px; */
+
+
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
@@ -9,10 +18,26 @@ body {
     justify-content: center;
     min-height: 100vh;
     color: #fff;
+    background-image: url("img/vibrant_background_pink.jpg");
+    background-size: cover;
 }
-
+header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 #profpic {
     margin-bottom: 20px;
+}
+
+
+/* Glassmorphism css */
+ main{
+    background: rgba(255, 255, 255, 0.314);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;   
 }
 
 .profilepicture {
@@ -20,6 +45,12 @@ body {
     height: 96px;
     border-radius: 50%;
     border: 2px solid #fff;
+}
+
+.txt-div{
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
 #title-text {
@@ -63,10 +94,28 @@ body {
     
     width: 20px;
     height: 20px;
-    margin-right: 8px;
+    margin: 0px 25px 0px 25px;
 }
 
 .btn-text {
     font-size: 14px;
     color: hwb(348 62% 5%);
 }
+
+.logo-container{
+    background-color: aqua;
+    display: flex;
+    margin: 50px 0px 50px 0px;
+    align-items: center;
+    align-content: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: hwb(253 7% 11% / 0.452);
+    color: white;
+    text-align: center;
+  }
