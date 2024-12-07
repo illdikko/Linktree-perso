@@ -9,6 +9,18 @@
 
     <title>Linktree Coline</title>
 </head>
+<!-- 
+main : changer les liens vers mes playlistes favorites
+logos -> chercher sur https://icon-sets.iconify.design/?query=github
+Logos de github, spotify, linkedIn
+ effet de hoover sur les boutons, changement de couleurs après clic, changement de forme de curseur???
+ PENSER A AJOUTER LE RESPONSIVE ( photos à côté du h1/h2 sur md+ et h1/h2 qui passent en dessous sur sm)
+ Marge/padding entre les liens et le cadre + autour de la pfp
+ Verif normes W3C + accessibilité
+ Remettre ReadME
+
+ icone github 
+ -->
 
 <body>
     <header>
@@ -16,51 +28,49 @@
             <img class="profilepicture" alt="photo de profile" src="./assets/img/profile-pic.jpg">
         </div>
         <div id="txt-div">
-            <h1 class="text" id="title-text">@Illdikko</h1>
-            <h2 class="text" id="undertitle-text">Crazy Cat Lady & Junior Developer</h2>
+            <h1 id="title-text">@Illdikko</h1>
+            <h2 id="undertitle-text">Crazy Cat Lady & Junior Developer</h2>
         </div>
     </header>
 
     <main>
-        <div class="btn-link">
+        <div class="btn-fav-playlist-list">
 
-            <a href="https://github.com/illdikko" class="button" id="github">
-                <span class="btn-text">Github</span>
+            <a href="https://open.spotify.com/playlist/2RHfgparZ8PzI4tJnYtVof?si=3067e60944834940" class="btn-link">
+                <span class="btn-text">ADHD Techno Focus</span>
+            </a>
+
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DWWl7MndYYxge?si=24dbac1b17d74e4e" class="btn-link">
+                <span class="btn-text">Années 80</span>
+            </a>
+
+            <a href="https://open.spotify.com/playlist/5SpXKOLINelm5Ivr5lUvj8?si=d99477a0c9874c43" class="btn-link"
+                id="linkedin">
+                <span class=" btn-text">Workout Metal (Beast Mode)</span>
             </a>
 
         </div>
-        <div class="btn-link">
 
-            <a href="https://open.spotify.com/user/mllec_33" class="button" id="spotify">
-                <span class="btn-text">Spotify</span>
-            </a>
-
-        </div>
-        <div class="btn-link">
-
-            <a href="https://www.linkedin.com/in/coline-ducourtieux/" class="button" id="linkedin">
-                <span class=" btn-text">LinkedIn</span>
-            </a>
-
-        </div>
         <div class="logo-container">
             <div class="logo-div">
-                <img src="./assets/img/linkedin-logo-png.png" class="logo" id="linkedin-logo" alt="logo LinkedIn">
+                <a href="https://www.linkedin.com/in/coline-ducourtieux/"><img src="./assets/img/linkedin-logo-png.png"
+                        class="logo" id="linkedin-logo" alt="logo LinkedIn"></a>
             </div>
             <div class="logo-div">
-                <img src="./assets/img/Spotify_Primary_Logo_RGB_Green.png" class="logo" id="spotify-logo"
-                    alt="logo Spotify">
+                <a href="https://open.spotify.com/user/mllec_33?si=ea46089b0e344489">
+                    <img src="./assets/img/Spotify_Primary_Logo_RGB_Green.png" class="logo" id="spotify-logo"
+                        alt="logo Spotify"></a>
             </div>
             <div class="logo-div">
-                <img src="./assets/img/github-logo.png" class="logo" id="github-logo" alt="logo Github">
+                <a href="https://github.com/illdikko"><img src="./assets/img/github-logo.png" class="logo"
+                        id="github-logo" alt="logo Github"></a>
             </div>
         </div>
     </main>
 
     <footer>
         <div class="bottom-container">
-            <div class="credits">Fonts and svg from <a href="http://www.onlinewebfonts.com">Web Fonts</a>, licensed by
-                CC BY 4.0</div>
+            <div class="credits">Fonts from <a href="https://www.nerdfonts.com/font-downloads">Nerd Fonts</a></div>
             <p class="copyright">© Coline Ducourtieux 2024</p>
         </div>
     </footer>
