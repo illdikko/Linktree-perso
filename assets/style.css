@@ -27,17 +27,23 @@ main{
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 90vw;
 }
 
 
 header{
-    display: block;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 #profpic {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .profilepicture {
@@ -81,10 +87,6 @@ header{
     display: grid;
 }
 
-.btn-img{
-    align-self: flex-start;
-}
-
 .logo {
     
     width: 20px;
@@ -95,6 +97,7 @@ header{
 .btn-text {
     font-size: 14px;
     color: hwb(348 62% 5%);
+    text-align: center;
 }
 
 .logo-container{
