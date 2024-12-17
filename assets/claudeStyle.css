@@ -1,0 +1,169 @@
+@font-face{
+    font-family: 'Monofur';
+    src:url('./fonts/Monofur/MonofurNerdFont-Regular.ttf')
+}
+
+/* Base styles (mobile-first) */
+body {
+    font-family: 'Monofur';
+    background: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    background-image: url("img/vibrant_background_pink.jpg");
+    background-size: cover;
+}
+
+main {
+    display: grid;
+    /* Glassmorphism css */
+    background: rgba(255, 255, 255, 0.314);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 360px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profpic {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.profilepicture {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.txt-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#title-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#undertitle-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 24px;
+    opacity: 0.8;
+}
+
+.btn-link {
+    margin: 8px 0;  /* Increased vertical margin between buttons */
+    padding: 16px;
+    background-color: hwb(253 7% 11% / 0.452);
+    opacity: 1;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 100%;
+    max-width: 300px;  /* Maximum width for buttons */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.btn-fav-playlist-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers the buttons horizontally */
+    width: 100%;
+    margin: 20px 0;  /* Added margin around the button container */
+}
+
+.btn-img {
+    align-self: flex-start;
+}
+
+.logo {
+    width: 20px;
+    height: 20px;
+    margin: 0px 25px 0px 25px;
+}
+
+.btn-text {
+    font-size: 14px;
+    color: hwb(348 62% 5%);
+}
+
+.logo-container {
+    display: flex;
+    margin: 50px 0px 50px 0px;
+    align-items: center;
+    align-content: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: small;
+}
+
+/* Media query for screens larger than 450px */
+@media screen and (min-width: 450px) {
+    main {
+        max-width: 600px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #profpic {
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+
+    .txt-div {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/* Media query for even larger screens */
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 800px;
+    }
+
+    .btn-link {
+        max-width: 400px;  /* Slightly wider buttons on larger screens */
+    }
+}
