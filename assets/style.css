@@ -88,21 +88,6 @@ header{
     margin-bottom: 24px;
 }
 
-.btn-link {
-    margin: 4px 0 4px 0;  /* Increased vertical margin between buttons */
-    padding: 16px;
-    background-color: #cf3672;
-    opacity: 0.75;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    width: 100%;
-    max-width: 300px;  /* Maximum width for buttons */
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-}
-
 .btn-fav-playlist-list {
     display: flex;
     flex-direction: column;
@@ -112,11 +97,31 @@ header{
     /* background-color: aquamarine; */
 }
 
+.btn-link {
+    display: flex;
+    align-items: center;
+    margin: 4px 0 4px 0;  /* Increased vertical margin between buttons */
+    padding: 16px;
+    background-color: #7a3f97;
+    opacity: 0.75;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 100%;
+    max-width: 300px;  /* Maximum width for buttons */
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+}
+
 
 .btn-text {
     font-size: 14px;
     color:#ffffff;
+    width: 100%;         
     text-align: center;
+    letter-spacing: 1px;;
+
 }
 
 .logo-container{
@@ -184,7 +189,6 @@ footer {
     .btn-link {
         font-weight: 600;
         width: 100%;
-        text-align: center;
     }
 }
 
