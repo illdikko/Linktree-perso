@@ -170,16 +170,6 @@ footer {
             opacity: 1;
         }
     }
-    @keyframes ripple {
-        0% {
-            transform: scale(0, 0);
-            opacity: 0.5;
-        }
-        100% {
-            transform: scale(40, 40);
-            opacity: 0;
-        }
-    }
     
     @keyframes profileColorShift {
         0% {
@@ -210,33 +200,9 @@ main{
     animation: profileColorShift 8s infinite, float 4s ease-in-out infinite;
 }
 
-    .btn-link{
-    position: relative;
-    overflow: hidden;
-}
-
-
-.btn-link::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-    border-radius: 100%;
-    transform: scale(1, 1) translate(-50%);
-    transform-origin: 50% 50%;
-}
-
-.btn-link:active::after {
-    animation: ripple 0.4s ease-out;
-}
-
 
 main, .profilepicture, .btn-link{
-    will-change: transform, filter, ripple;
+    will-change: transform, filter;
     backface-visibility: hidden;
 }
 
