@@ -221,12 +221,11 @@ main, .profilepicture, .btn-link{
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: 30px;
+        gap: 25px;
     }
 
     #profpic {
         margin-bottom: 20px;
-        margin-left: 10px;
         border-color: #fff;
         border-width: 2px;   }
 
