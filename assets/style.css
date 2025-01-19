@@ -181,9 +181,35 @@ footer {
         }
     }
     
+    @keyframes profileColorShift {
+        0% {
+            filter: grayscale(0%) brightness(1);
+        }
+        50% {
+            filter: grayscale(100%) brightness(0.8);
+        }
+        100% {
+            filter: grayscale(0%) brightness(1);
+        }
+    }
+
+    /* Subtle floating animation for the profile picture */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
 main{
     animation: slideUpFade 1s ease-out;
 }
+
+.profilepicture {
+    animation: profileColorShift 8s infinite, float 4s ease-in-out infinite;
+}
+
     .btn-link{
     position: relative;
     overflow: hidden;
@@ -208,6 +234,11 @@ main{
     animation: ripple 0.4s ease-out;
 }
 
+
+main, .profilepicture, .btn-link{
+    will-change: transform, filter, ripple;
+    backface-visibility: hidden;
+}
 
 
 }
