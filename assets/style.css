@@ -1,19 +1,22 @@
-
-/*ADD COMMENTS AS IF I SHOWED THE CODE TO MY PARENTS*/
-
-/*Custom fonts*/
-
-@font-face{
-    font-family: 'Monofur';
-    src:url('./fonts/Monofur/MonofurNerdFont-Regular.ttf')
+/* Remove the fixed positioning and modify the footer styles */
+footer {
+    position: relative; /* Changed from fixed */
+    left: 0;
+    bottom: 0;
+    margin-top: auto; /* This will push the footer to the bottom */
+    width: 100%;
+    color: white;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: small;
 }
 
-@font-face {
-    font-family: 'Monofur Bold';
-    src:url('./fonts/Monofur/MonofurNerdFont-Bold.ttf')
-}
-
-/* CSS mobile-first*/
+/* Update body styles to ensure proper scrolling behavior */
 body {
     font-family: 'Monofur';
     background-color: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
@@ -22,274 +25,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Changed from center */
     min-height: 100vh;
     color: #fff;
     background-image: url("img/vibrant_background_pink.jpg");
     background-size: cover;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-
-main{
+/* Update main container to take available space */
+main {
     display: grid;
     grid-template-rows: 1fr auto;
-    /* align-items: center;  */
-    justify-items: center; 
-    /* Glassmorphism css */
+    justify-items: center;
     background: rgba(255, 255, 255, 0.314);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 7.5px );
-    -webkit-backdrop-filter: blur( 7.5px );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
     border-radius: 10px;
     padding: 10px;
     width: 80%;
-
+    margin-bottom: 20px; /* Add some space before footer */
+    flex: 1; /* Take up available space */
 }
-
-
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: #FF6A88; */
-}
-
-
-#profpic {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.profilepicture {
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-}
-
-.txt-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
-
-#title-text {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 8px;
-    font-family: 'Monofur Bold';
-}
-
-#undertitle-text {
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 2px;
-    margin-bottom: 24px;
-    font-family: 'Monofur Bold';
-}
-
-.btn-fav-playlist-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Centers the content (here buttons) horizontally */
-    width: 100%;
-    margin: 8px 0;  /* Added margin around the button container */
-    /* background-color: aquamarine; */
-}
-
-.btn-link {
-    display: flex;
-    align-items: center;
-    margin: 4px 0 4px 0;  /* Increased vertical margin between buttons */
-    padding: 16px;
-    background-color: #7a3f97;
-    opacity: 1;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    width: 100%;
-    max-width: 300px;  /* Maximum width for buttons */
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-}
-
-.btn-text {
-    font-size: 14px;
-    color:#ffffff;
-    width: 100%;         
-    text-align: center;
-    letter-spacing: 1px;;
-
-}
-
-.logo-container{
-    width: 50%;
-    display: flex;
-    justify-content: space-around; /*Spaces the content evenly horizontaly*/
-    margin: 50px 0px 15px 0px;
-    /* background-color: burlywood; */
-}
-
-
-.logo {
-    width: 20px;
-    height: 20px;
-}
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin-top: 25px;
-    width: 100%;
-    color: white;
-    text-align: center;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 10.5px );
-    -webkit-backdrop-filter: blur( 10.5px );
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    font-size: small;
-
-}
-
-/*Media query to apply some animations and transitions to small and medium screens only*/
-
-@media screen and (max-width: 1024px) {
-
-    @keyframes slideUpFade {
-        from {
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-    
-    @keyframes profileColorShift {
-        0% {
-            filter: grayscale(0%) brightness(1);
-        }
-        50% {
-            filter: grayscale(100%) brightness(0.8);
-        }
-        100% {
-            filter: grayscale(0%) brightness(1);
-        }
-    }
-
-    /* Subtle floating animation for the profile picture */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-main{
-    animation: slideUpFade 1s ease-out;
-}
-
-.profilepicture {
-    animation: profileColorShift 8s infinite, float 4s ease-in-out infinite;
-}
-
-
-main, .profilepicture, .btn-link{
-    will-change: transform, filter;
-    backface-visibility: hidden;
-}
-
-
-}
-
-/* Media query for screens larger than 450px */
-@media screen and (min-width: 1025px) {
-
-    /* Bigger main width */
-    main {
-        max-width: 450px;
-    }
-
-    header {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 25px;
-    }
-
-    #profpic {
-        margin-bottom: 20px;
-        border-color: #fff;
-        border-width: 2px;   }
-
-        .profilepicture {
-            align-items: center;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            transition: transform 0.5s ease;
-        }
-        
-        .profilepicture:hover {
-            transform: rotate(360deg);
-        }
-
-    .txt-div {
-        align-items: flex-start;
-        text-align: left;
-    }
-    .btn-fav-playlist-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 85%;
-    }
-
-    .btn-link {
-        font-weight: 600;
-        width: 100%;
-    }
-}
-
-/* For the buttons with swiping color effect */
-.btn-link {
-    position: relative;
-    background: linear-gradient(to right, #472457 50%, #7a3f97 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all 0.3s ease-out;
-  }
-  
-  .btn-link:hover {
-    background-position: left bottom;
-    transform: scale(1.1); /* Increases size by 50% */
-  }
-  
-  /* For the growing logo */
-  .logo {
-    transition: transform 0.3s ease;
-  }
-  
-  .logo:hover {
-    transform: scale(1.5); /* Increases size by 50% */
-  }
-
-
-
-/* Glassmorphism css reusable snippet:
-
-background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 10.5px );
--webkit-backdrop-filter: blur( 10.5px );
-border-radius: 10px; */
