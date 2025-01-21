@@ -13,7 +13,7 @@
 /*Css global pour mobil-first*/
 body {
     font-family: 'Monofur';
-    background-color: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
+    background: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
     margin: 0;
     padding: 0;
     display: flex;
@@ -184,12 +184,16 @@ footer {
     /* Animation de flottement*/
     @keyframes float {
         0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
             transform: translateY(-10px);
         }
+        50% {
+            transform: translateY(0px);
+        }
     }
+
+header{
+    margin-top: 30px;
+}
 
     /* On appelle les animations dans l'élément */
 main{
