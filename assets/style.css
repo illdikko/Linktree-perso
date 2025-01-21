@@ -1,4 +1,3 @@
-
 /*ADD COMMENTS AS IF I SHOWED THE CODE TO MY PARENTS*/
 
 /*Custom fonts*/
@@ -27,7 +26,6 @@ body {
     color: #fff;
     background-image: url("img/vibrant_background_pink.jpg");
     background-size: cover;
-    overflow-x: hidden;
 }
 
 
@@ -44,8 +42,7 @@ main{
     border-radius: 10px;
     padding: 10px;
     width: 80%;
-    margin-bottom: 20px; /* Add some space before footer */
-    /* flex: 0.5; Take up available space */
+
 }
 
 
@@ -53,6 +50,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-color: #FF6A88; */
 }
 
 
@@ -142,10 +140,10 @@ header{
 }
 
 footer {
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
-    margin-top: auto;
+    margin-top: 25px;
     width: 100%;
     color: white;
     text-align: center;
@@ -214,10 +212,8 @@ main, .profilepicture, .btn-link{
 
 /* Media query for screens larger than 450px */
 @media screen and (min-width: 1025px) {
-body{
-    display: flex;
-    justify-content: center;
-}
+
+    /* Bigger main width */
     main {
         max-width: 450px;
     }
