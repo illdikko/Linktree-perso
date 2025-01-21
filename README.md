@@ -1,2 +1,2 @@
-Visit here : https://illdikko.github.io/efp-exo-linktree-perso/
+Visit here : https://illdikko.github.io/Linktree-perso/
 
