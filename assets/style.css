@@ -1,6 +1,4 @@
-/*ADD COMMENTS AS IF I SHOWED THE CODE TO MY PARENTS*/
-
-/*Custom fonts*/
+/*Import de police d'écriture*/
 
 @font-face{
     font-family: 'Monofur';
@@ -12,7 +10,7 @@
     src:url('./fonts/Monofur/MonofurNerdFont-Bold.ttf')
 }
 
-/* CSS mobile-first*/
+/*Css global pour mobil-first*/
 body {
     font-family: 'Monofur';
     background-color: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
@@ -92,15 +90,15 @@ header{
 .btn-fav-playlist-list {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Centers the content (here buttons) horizontally */
+    align-items: center;  /* s'applique sur le conteneur pour centrer le contenu */
     width: 100%;
-    margin: 8px 0;  /* Added margin around the button container */
+    margin: 8px 0;
 }
 
 .btn-link {
     display: flex;
     align-items: center;
-    margin: 4px 0 4px 0;  /* Increased vertical margin between buttons */
+    margin: 4px 0 4px 0;
     padding: 16px;
     background-color: #7a3f97;
     opacity: 1;
@@ -108,7 +106,7 @@ header{
     text-decoration: none;
     font-weight: 600;
     width: 100%;
-    max-width: 300px;  /* Maximum width for buttons */
+    max-width: 300px;  /* Taille maximale des boutons en mobile-first */
     box-sizing: border-box;
     justify-content: center;
     text-align: center;
@@ -126,7 +124,7 @@ header{
 .logo-container{
     width: 50%;
     display: flex;
-    justify-content: space-around; /*Spaces the content evenly horizontaly*/
+    justify-content: space-around; /*Permet d'espacer le contenu d'un élément équitablement*/
     margin: 50px 0px 15px 0px;
 }
 
@@ -154,10 +152,11 @@ footer {
 
 }
 
-/*Media query to apply some animations and transitions to small and medium screens only*/
-
+/*Règles css uniquement pour les petits et moyens écrans*/
+/* Certaines animations ne sont pas applicables aux petits écrans tactiles, il a donc fallu en trouver d'autres plus adaptées */
 @media screen and (max-width: 1024px) {
 
+    /*Entrée du contenu de la page en glissant, au chargement de la page*/
     @keyframes slideUpFade {
         from {
             transform: translateY(20px);
@@ -169,6 +168,7 @@ footer {
         }
     }
     
+    /*Changement de couleur de la photo de profil */
     @keyframes profileColorShift {
         0% {
             filter: grayscale(0%) brightness(1);
@@ -181,7 +181,7 @@ footer {
         }
     }
 
-    /* Subtle floating animation for the profile picture */
+    /* Animation de flottement*/
     @keyframes float {
         0%, 100% {
             transform: translateY(0);
@@ -190,6 +190,8 @@ footer {
             transform: translateY(-10px);
         }
     }
+
+    /* On appelle les animations dans l'élément */
 main{
     animation: slideUpFade 1s ease-out;
 }
@@ -204,20 +206,23 @@ main, .profilepicture, .btn-link{
     backface-visibility: hidden;
 }
 
+/* Changement du comportement du footer sur petits écrans lorsque le mode paysage est activé */
 footer{
     position: relative;
     margin-top: auto;
 }
 }
 
-/* Media query for screens larger than 450px */
+/* Règles css pour grands écrans */
+
 @media screen and (min-width: 1025px) {
 
-    /* Bigger main width */
+    /* Aggrandissement de la taille max du main*/
     main {
         max-width: 450px;
     }
 
+    /* La photo de profil passe à gauche du titre et sous titre, et les deux sont centrés */
     header {
         flex-direction: row;
         justify-content: flex-start;
@@ -225,17 +230,9 @@ footer{
         gap: 25px;
     }
 
-    #profpic {
-        margin-bottom: 20px;
-        border-color: #fff;
-        border-width: 2px;   }
 
+    /* Effet de 360 sur la photo de profil lors du hoover */
         .profilepicture {
-            align-items: center;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 2px solid #fff;
             transition: transform 0.5s ease;
         }
         
@@ -243,10 +240,13 @@ footer{
             transform: rotate(360deg);
         }
 
+/* Les sous titres passent à droite de la photo de profile */
     .txt-div {
         align-items: flex-start;
         text-align: left;
     }
+
+/* l'élement à une plus grande largeur */
     .btn-fav-playlist-list {
         display: flex;
         flex-direction: column;
@@ -254,13 +254,9 @@ footer{
         width: 85%;
     }
 
-    .btn-link {
-        font-weight: 600;
-        width: 100%;
-    }
 }
 
-/* For the buttons with swiping color effect */
+/* Changement de couleur du bouton lors du hoover */
 .btn-link {
     position: relative;
     background: linear-gradient(to right, #472457 50%, #7a3f97 50%);
@@ -271,10 +267,10 @@ footer{
   
   .btn-link:hover {
     background-position: left bottom;
-    transform: scale(1.1); /* Increases size by 50% */
+    transform: scale(1.1); /* Increases size by 10% */
   }
   
-  /* For the growing logo */
+  /* Effet de pop du logo */
   .logo {
     transition: transform 0.3s ease;
   }
