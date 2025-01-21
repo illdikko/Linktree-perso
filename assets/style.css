@@ -26,13 +26,13 @@ body {
     color: #fff;
     background-image: url("img/vibrant_background_pink.jpg");
     background-size: cover;
+    overflow-x: hidden;
 }
 
 
 main{
     display: grid;
     grid-template-rows: 1fr auto;
-    /* align-items: center;  */
     justify-items: center; 
     /* Glassmorphism css */
     background: rgba(255, 255, 255, 0.314);
@@ -42,7 +42,7 @@ main{
     border-radius: 10px;
     padding: 10px;
     width: 80%;
-
+    margin-bottom: 20px;
 }
 
 
@@ -50,7 +50,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: #FF6A88; */
 }
 
 
@@ -96,7 +95,6 @@ header{
     align-items: center;  /* Centers the content (here buttons) horizontally */
     width: 100%;
     margin: 8px 0;  /* Added margin around the button container */
-    /* background-color: aquamarine; */
 }
 
 .btn-link {
@@ -130,7 +128,6 @@ header{
     display: flex;
     justify-content: space-around; /*Spaces the content evenly horizontaly*/
     margin: 50px 0px 15px 0px;
-    /* background-color: burlywood; */
 }
 
 
@@ -143,7 +140,7 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    margin-top: 25px;
+    margin-top: 20px;
     width: 100%;
     color: white;
     text-align: center;
@@ -207,7 +204,10 @@ main, .profilepicture, .btn-link{
     backface-visibility: hidden;
 }
 
-
+footer{
+    position: relative;
+    margin-top: auto;
+}
 }
 
 /* Media query for screens larger than 450px */
